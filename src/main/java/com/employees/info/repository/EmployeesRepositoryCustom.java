@@ -19,4 +19,12 @@ public interface EmployeesRepositoryCustom {
             Long employeeId,
             BigDecimal salaryIncreased
     );
+
+    public void updateEmployeeByEmployeeId(
+            Long employeeId,
+            String email,
+            String phoneNumber,
+            BigDecimal commissionPct,
+            Long departmentId
+    );
 }

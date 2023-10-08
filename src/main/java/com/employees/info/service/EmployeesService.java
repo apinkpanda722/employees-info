@@ -58,4 +58,13 @@ public class EmployeesService {
             employeesRepositoryCustomImpl.updateSalary(employee.getEmployeeId(), salaryIncreased);
         }
     }
+
+    @Transactional
+    public void updateEmployeeByEmployeeId(Long employeeId,
+                                           String email,
+                                           String phoneNumber,
+                                           BigDecimal commissionPct,
+                                           Long departmentId) {
+        employeesRepositoryCustomImpl.updateEmployeeByEmployeeId(employeeId, email, phoneNumber, commissionPct, departmentId);
+    }
 }

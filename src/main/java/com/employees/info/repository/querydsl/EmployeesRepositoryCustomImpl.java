@@ -75,6 +75,22 @@ public class EmployeesRepositoryCustomImpl extends QuerydslRepositorySupport
                 .execute();
     }
 
+    @Override
+    public void updateEmployeeByEmployeeId(Long employeeId,
+                                           String email,
+                                           String phoneNumber,
+                                           BigDecimal commissionPct,
+                                           Long departmentId
+    ) {
+        update(employees)
+                .set(employees.email, email)
+                .set(employees.phoneNumber, phoneNumber)
+                .set(employees.commissionPct, commissionPct)
+                .set(employees.departmentId, departmentId)
+                .where(employees.employeeId.eq(employeeId))
+                .execute();
+    }
+
     private BooleanExpression eqEmployeeId(Long employeeId) {
         if (employeeId == null || employeeId == 0) {
             return null;

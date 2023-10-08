@@ -41,4 +41,15 @@ public class EmployeesController {
     ) {
         employeeService.getARaise(departmentId, salaryIncreasePercentage);
     }
+
+    @PutMapping("/employees/{employee-id}")
+    public void updateEmployeeByEmployeeId(
+            @PathVariable("employee-id") Long employeeId,
+            @RequestParam(value = "email", required = false) String email,
+            @RequestParam(value = "phoneNumber", required = false) String phoneNumber,
+            @RequestParam(value = "commissionPct", required = false) BigDecimal commissionPct,
+            @RequestParam(value = "departmentId", required = false) Long departmentId
+    ) {
+        employeeService.updateEmployeeByEmployeeId(employeeId, email, phoneNumber, commissionPct, departmentId);
+    }
 }
