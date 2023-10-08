@@ -10,14 +10,14 @@ import com.querydsl.core.types.Path;
 
 
 /**
- * Qemployees is a Querydsl query type for employees
+ * QEmployees is a Querydsl query type for Employees
  */
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
-public class Qemployees extends EntityPathBase<employees> {
+public class QEmployees extends EntityPathBase<Employees> {
 
-    private static final long serialVersionUID = -629332380L;
+    private static final long serialVersionUID = 1374635588L;
 
-    public static final Qemployees employees = new Qemployees("employees");
+    public static final QEmployees employees = new QEmployees("employees");
 
     public final NumberPath<java.math.BigDecimal> commissionPct = createNumber("commissionPct", java.math.BigDecimal.class);
 
@@ -41,16 +41,16 @@ public class Qemployees extends EntityPathBase<employees> {
 
     public final NumberPath<java.math.BigDecimal> salary = createNumber("salary", java.math.BigDecimal.class);
 
-    public Qemployees(String variable) {
-        super(employees.class, forVariable(variable));
+    public QEmployees(String variable) {
+        super(Employees.class, forVariable(variable));
     }
 
-    public Qemployees(Path<? extends employees> path) {
+    public QEmployees(Path<? extends Employees> path) {
         super(path.getType(), path.getMetadata());
     }
 
-    public Qemployees(PathMetadata metadata) {
-        super(employees.class, metadata);
+    public QEmployees(PathMetadata metadata) {
+        super(Employees.class, metadata);
     }
 
 }

@@ -10,14 +10,14 @@ import com.querydsl.core.types.Path;
 
 
 /**
- * QjobHistory is a Querydsl query type for jobHistory
+ * QJobHistory is a Querydsl query type for JobHistory
  */
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
-public class QjobHistory extends EntityPathBase<jobHistory> {
+public class QJobHistory extends EntityPathBase<JobHistory> {
 
-    private static final long serialVersionUID = 971261720L;
+    private static final long serialVersionUID = -1330240712L;
 
-    public static final QjobHistory jobHistory = new QjobHistory("jobHistory");
+    public static final QJobHistory jobHistory = new QJobHistory("jobHistory");
 
     public final NumberPath<Long> departmentId = createNumber("departmentId", Long.class);
 
@@ -29,16 +29,16 @@ public class QjobHistory extends EntityPathBase<jobHistory> {
 
     public final DateTimePath<java.time.LocalDateTime> startDate = createDateTime("startDate", java.time.LocalDateTime.class);
 
-    public QjobHistory(String variable) {
-        super(jobHistory.class, forVariable(variable));
+    public QJobHistory(String variable) {
+        super(JobHistory.class, forVariable(variable));
     }
 
-    public QjobHistory(Path<? extends jobHistory> path) {
+    public QJobHistory(Path<? extends JobHistory> path) {
         super(path.getType(), path.getMetadata());
     }
 
-    public QjobHistory(PathMetadata metadata) {
-        super(jobHistory.class, metadata);
+    public QJobHistory(PathMetadata metadata) {
+        super(JobHistory.class, metadata);
     }
 
 }

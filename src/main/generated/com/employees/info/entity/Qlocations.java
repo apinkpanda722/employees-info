@@ -10,14 +10,14 @@ import com.querydsl.core.types.Path;
 
 
 /**
- * Qlocations is a Querydsl query type for locations
+ * QLocations is a Querydsl query type for Locations
  */
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
-public class Qlocations extends EntityPathBase<locations> {
+public class QLocations extends EntityPathBase<Locations> {
 
-    private static final long serialVersionUID = -169374147L;
+    private static final long serialVersionUID = 1834593821L;
 
-    public static final Qlocations locations = new Qlocations("locations");
+    public static final QLocations locations = new QLocations("locations");
 
     public final StringPath city = createString("city");
 
@@ -31,16 +31,16 @@ public class Qlocations extends EntityPathBase<locations> {
 
     public final StringPath streetAddress = createString("streetAddress");
 
-    public Qlocations(String variable) {
-        super(locations.class, forVariable(variable));
+    public QLocations(String variable) {
+        super(Locations.class, forVariable(variable));
     }
 
-    public Qlocations(Path<? extends locations> path) {
+    public QLocations(Path<? extends Locations> path) {
         super(path.getType(), path.getMetadata());
     }
 
-    public Qlocations(PathMetadata metadata) {
-        super(locations.class, metadata);
+    public QLocations(PathMetadata metadata) {
+        super(Locations.class, metadata);
     }
 
 }

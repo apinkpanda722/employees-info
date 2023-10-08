@@ -10,14 +10,14 @@ import com.querydsl.core.types.Path;
 
 
 /**
- * Qjobs is a Querydsl query type for jobs
+ * QJobs is a Querydsl query type for Jobs
  */
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
-public class Qjobs extends EntityPathBase<jobs> {
+public class QJobs extends EntityPathBase<Jobs> {
 
-    private static final long serialVersionUID = 1680971287L;
+    private static final long serialVersionUID = 1680017975L;
 
-    public static final Qjobs jobs = new Qjobs("jobs");
+    public static final QJobs jobs = new QJobs("jobs");
 
     public final StringPath jobId = createString("jobId");
 
@@ -27,16 +27,16 @@ public class Qjobs extends EntityPathBase<jobs> {
 
     public final NumberPath<java.math.BigDecimal> minSalary = createNumber("minSalary", java.math.BigDecimal.class);
 
-    public Qjobs(String variable) {
-        super(jobs.class, forVariable(variable));
+    public QJobs(String variable) {
+        super(Jobs.class, forVariable(variable));
     }
 
-    public Qjobs(Path<? extends jobs> path) {
+    public QJobs(Path<? extends Jobs> path) {
         super(path.getType(), path.getMetadata());
     }
 
-    public Qjobs(PathMetadata metadata) {
-        super(jobs.class, metadata);
+    public QJobs(PathMetadata metadata) {
+        super(Jobs.class, metadata);
     }
 
 }

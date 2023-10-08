@@ -10,14 +10,14 @@ import com.querydsl.core.types.Path;
 
 
 /**
- * Qcountries is a Querydsl query type for countries
+ * QCountries is a Querydsl query type for Countries
  */
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
-public class Qcountries extends EntityPathBase<countries> {
+public class QCountries extends EntityPathBase<Countries> {
 
-    private static final long serialVersionUID = -1914515053L;
+    private static final long serialVersionUID = 89452915L;
 
-    public static final Qcountries countries = new Qcountries("countries");
+    public static final QCountries countries = new QCountries("countries");
 
     public final StringPath countryId = createString("countryId");
 
@@ -25,16 +25,16 @@ public class Qcountries extends EntityPathBase<countries> {
 
     public final NumberPath<Long> regionId = createNumber("regionId", Long.class);
 
-    public Qcountries(String variable) {
-        super(countries.class, forVariable(variable));
+    public QCountries(String variable) {
+        super(Countries.class, forVariable(variable));
     }
 
-    public Qcountries(Path<? extends countries> path) {
+    public QCountries(Path<? extends Countries> path) {
         super(path.getType(), path.getMetadata());
     }
 
-    public Qcountries(PathMetadata metadata) {
-        super(countries.class, metadata);
+    public QCountries(PathMetadata metadata) {
+        super(Countries.class, metadata);
     }
 
 }

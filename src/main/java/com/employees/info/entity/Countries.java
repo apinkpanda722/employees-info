@@ -11,7 +11,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class countries {
+public class Countries {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

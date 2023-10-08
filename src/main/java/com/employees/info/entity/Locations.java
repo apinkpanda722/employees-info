@@ -11,7 +11,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class locations {
+public class Locations {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

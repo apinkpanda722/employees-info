@@ -10,14 +10,14 @@ import com.querydsl.core.types.Path;
 
 
 /**
- * Qdepartments is a Querydsl query type for departments
+ * QDepartments is a Querydsl query type for Departments
  */
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
-public class Qdepartments extends EntityPathBase<departments> {
+public class QDepartments extends EntityPathBase<Departments> {
 
-    private static final long serialVersionUID = 411771520L;
+    private static final long serialVersionUID = 2079640160L;
 
-    public static final Qdepartments departments = new Qdepartments("departments");
+    public static final QDepartments departments = new QDepartments("departments");
 
     public final NumberPath<Long> departmentId = createNumber("departmentId", Long.class);
 
@@ -27,16 +27,16 @@ public class Qdepartments extends EntityPathBase<departments> {
 
     public final NumberPath<Long> managerId = createNumber("managerId", Long.class);
 
-    public Qdepartments(String variable) {
-        super(departments.class, forVariable(variable));
+    public QDepartments(String variable) {
+        super(Departments.class, forVariable(variable));
     }
 
-    public Qdepartments(Path<? extends departments> path) {
+    public QDepartments(Path<? extends Departments> path) {
         super(path.getType(), path.getMetadata());
     }
 
-    public Qdepartments(PathMetadata metadata) {
-        super(departments.class, metadata);
+    public QDepartments(PathMetadata metadata) {
+        super(Departments.class, metadata);
     }
 
 }

@@ -10,29 +10,29 @@ import com.querydsl.core.types.Path;
 
 
 /**
- * Qregions is a Querydsl query type for regions
+ * QRegions is a Querydsl query type for Regions
  */
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
-public class Qregions extends EntityPathBase<regions> {
+public class QRegions extends EntityPathBase<Regions> {
 
-    private static final long serialVersionUID = 1020140190L;
+    private static final long serialVersionUID = -1610173826L;
 
-    public static final Qregions regions = new Qregions("regions");
+    public static final QRegions regions = new QRegions("regions");
 
     public final NumberPath<Long> regionId = createNumber("regionId", Long.class);
 
     public final StringPath regionName = createString("regionName");
 
-    public Qregions(String variable) {
-        super(regions.class, forVariable(variable));
+    public QRegions(String variable) {
+        super(Regions.class, forVariable(variable));
     }
 
-    public Qregions(Path<? extends regions> path) {
+    public QRegions(Path<? extends Regions> path) {
         super(path.getType(), path.getMetadata());
     }
 
-    public Qregions(PathMetadata metadata) {
-        super(regions.class, metadata);
+    public QRegions(PathMetadata metadata) {
+        super(Regions.class, metadata);
     }
 
 }

@@ -3,7 +3,6 @@ package com.employees.info.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -14,7 +13,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class jobHistory {
+public class JobHistory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

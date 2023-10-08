@@ -11,7 +11,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class regions {
+public class Regions {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
