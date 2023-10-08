@@ -14,6 +14,8 @@ import java.time.LocalDateTime;
 @Builder
 public class EmployeesDto {
 
+    private Long employeeId;
+
     private String firstName;
 
     private String lastName;
@@ -31,4 +33,15 @@ public class EmployeesDto {
     private BigDecimal commissionPct;
 
     private String departmentName;
+
+    public EmployeesDto(Long employeeId,
+                        BigDecimal salary,
+                        BigDecimal commissionPct
+                        )
+    {
+        this.employeeId = employeeId;
+        this.salary = salary;
+        this.commissionPct = commissionPct;
+    }
+
 }

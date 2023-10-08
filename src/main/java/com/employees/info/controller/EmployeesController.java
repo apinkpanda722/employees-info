@@ -6,10 +6,9 @@ import com.employees.info.dto.JobHistoryDto;
 import com.employees.info.service.EmployeesService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -20,7 +19,7 @@ public class EmployeesController {
 
     @GetMapping("/employees/{employee-id}")
     public ResponseEntity<EmployeesDto> getEmployeeInfo(
-    @PathVariable("employee-id") Long employeeId) {
+            @PathVariable("employee-id") Long employeeId) {
         return ResponseEntity.ok(employeeService.getEmployeeById(employeeId));
     }
 
@@ -33,5 +32,13 @@ public class EmployeesController {
     @GetMapping("/departments")
     public ResponseEntity<List<DepartmentsDto>> getDepartments() {
         return ResponseEntity.ok(employeeService.getDepartments());
+    }
+
+    @PutMapping("/departments/pay-raise")
+    public void getARaise(
+            @RequestParam(value = "departmentId", required = false) Long departmentId,
+            @RequestParam(value = "salaryIncreasePercentage", required = false) BigDecimal salaryIncreasePercentage
+    ) {
+        employeeService.getARaise(departmentId, salaryIncreasePercentage);
     }
 }

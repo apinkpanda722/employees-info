@@ -1,5 +1,6 @@
 package com.employees.info.entity;
 
+import com.employees.info.dto.EmployeesDto;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -49,4 +50,5 @@ public class Employees {
 
     @Column(length = 11, name = "department_id")
     private Long departmentId;
+
 }
