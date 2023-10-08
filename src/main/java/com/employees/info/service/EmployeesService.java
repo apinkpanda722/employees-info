@@ -1,7 +1,9 @@
 package com.employees.info.service;
 
+import com.employees.info.dto.DepartmentsDto;
 import com.employees.info.dto.EmployeesDto;
 import com.employees.info.dto.JobHistoryDto;
+import com.employees.info.repository.querydsl.DepartmentsRepositoryCustomImpl;
 import com.employees.info.repository.querydsl.EmployeesRepositoryCustomImpl;
 import com.employees.info.repository.querydsl.JobHistoryRepositoryCustomImpl;
 import jakarta.transaction.Transactional;
@@ -20,6 +22,8 @@ public class EmployeesService {
 
     private final JobHistoryRepositoryCustomImpl jobHistoryRepositoryCustomImpl;
 
+    private final DepartmentsRepositoryCustomImpl departmentsRepositoryCustomImpl;
+
     @Transactional
     public EmployeesDto getEmployeeById(Long employeeId) {
         return employeesRepositoryCustomImpl.getEmployeeById(employeeId);
@@ -28,5 +32,10 @@ public class EmployeesService {
     @Transactional
     public List<JobHistoryDto> getJobHistoryById(Long employeeId) {
         return jobHistoryRepositoryCustomImpl.getJobHistoryById(employeeId);
+    }
+
+    @Transactional
+    public List<DepartmentsDto> getDepartments() {
+        return departmentsRepositoryCustomImpl.getDepartments();
     }
 }

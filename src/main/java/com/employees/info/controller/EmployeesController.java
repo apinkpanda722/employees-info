@@ -1,5 +1,6 @@
 package com.employees.info.controller;
 
+import com.employees.info.dto.DepartmentsDto;
 import com.employees.info.dto.EmployeesDto;
 import com.employees.info.dto.JobHistoryDto;
 import com.employees.info.service.EmployeesService;
@@ -27,5 +28,10 @@ public class EmployeesController {
     public ResponseEntity<List<JobHistoryDto>> getEmployeeJobHistory(
             @PathVariable("employee-id") Long employeeId) {
         return ResponseEntity.ok(employeeService.getJobHistoryById(employeeId));
+    }
+
+    @GetMapping("/departments")
+    public ResponseEntity<List<DepartmentsDto>> getDepartments() {
+        return ResponseEntity.ok(employeeService.getDepartments());
     }
 }
