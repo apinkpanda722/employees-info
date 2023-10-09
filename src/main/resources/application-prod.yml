@@ -1,0 +1,22 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://employeeandopenapidb-db.cicvqktgkj3j.ap-northeast-2.rds.amazonaws.com:3306/test
+    username: admin
+    password: chayasa100!
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    generate-ddl: false
+    show-sql: true
+    database: mysql
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: false
