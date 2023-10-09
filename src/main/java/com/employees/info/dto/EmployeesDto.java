@@ -1,5 +1,7 @@
 package com.employees.info.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,6 +16,7 @@ import java.time.LocalDateTime;
 @Builder
 public class EmployeesDto {
 
+    @JsonIgnore
     private Long employeeId;
 
     private String firstName;
