@@ -1,7 +1,15 @@
 package com.employees.info.controller;
 
+import com.employees.info.dto.RequestBodyDto;
+import com.employees.info.service.OpenApiService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.json.simple.JSONObject;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @Tag(name = "공공 데이터 API 조회 컨트롤러",
@@ -9,4 +17,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RestController
 public class OpenApiController {
+
+    private final OpenApiService openApiService;
+
+    @Operation(summary = "공공 데이터 API 조회",
+            description = "Request Body로 받은 url, serviceKey, parameters를 사용해 임의의 공공데이터 API를 조회한다.")
+    @PostMapping("/open-api")
+    public JSONObject getARaise(
+            @RequestBody @Valid RequestBodyDto requestBodyDto
+    ) {
+        return openApiService.call(requestBodyDto);
+    }
 }

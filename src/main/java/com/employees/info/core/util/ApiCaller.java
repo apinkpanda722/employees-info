@@ -17,7 +17,7 @@ import java.util.HashMap;
 @Slf4j
 public class ApiCaller {
 
-    public JSONObject sendGetRequest(String baseUrl, String serviceKey, HashMap<String, String> parameters) {
+    public static JSONObject sendGetRequest(String baseUrl, String serviceKey, HashMap<String, String> parameters) {
         int responseCode;
         var data = new JSONObject();
         String utf_8 = String.valueOf(StandardCharsets.UTF_8);
@@ -28,6 +28,10 @@ public class ApiCaller {
                     .append(URLEncoder.encode("serviceKey", utf_8))
                     .append("=")
                     .append(serviceKey); /* Service Key */
+            urlBuilder.append("&")
+                    .append(URLEncoder.encode("_type", utf_8))
+                    .append("=")
+                    .append(URLEncoder.encode("json", utf_8));
             parameters.forEach((key, value) -> {
                 log.info("parameters => " + key + " : " + value);
                 try {
@@ -39,28 +43,7 @@ public class ApiCaller {
                     throw new RuntimeException(e);
                 }
             });
-//            urlBuilder.append("?")
-//                    .append(URLEncoder.encode("serviceKey", utf_8))
-//                    .append("=")
-//                    .append(serviceKey); /* Service Key */
-//            urlBuilder.append("&")
-//                    .append(URLEncoder.encode("numOfRows", utf_8))
-//                    .append("=")
-//                    .append(URLEncoder.encode("10", utf_8));
-//            urlBuilder.append("&")
-//                    .append(URLEncoder.encode("pageNo", utf_8))
-//                    .append("=")
-//                    .append(URLEncoder.encode("1", utf_8));
-//            urlBuilder.append("&")
-//                    .append(URLEncoder.encode("MobileOS", utf_8))
-//                    .append("=").append(URLEncoder.encode("IOS", utf_8));
-//            urlBuilder.append("&")
-//                    .append(URLEncoder.encode("MobileApp", utf_8))
-//                    .append("=").append(URLEncoder.encode("AppTest", utf_8));
-//            urlBuilder.append("&")
-//                    .append(URLEncoder.encode("_type", utf_8))
-//                    .append("=")
-//                    .append(URLEncoder.encode("json", utf_8));
+
             URL url = new URL(urlBuilder.toString());
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -80,18 +63,16 @@ public class ApiCaller {
         return data;
     }
 
-    public static void main(String[] args) {
-        ApiCaller apiCaller = new ApiCaller();
-
-        System.out.println("//===== GET REQUEST =====//");
-        String serviceKey = "jEIrt7Smf5IMFrn65l99DegsRF5rusgCpOpV6yV8DIPezaaV6gblD4m2Ndrlf%2BNqZzsA4SPnQfDOpnmOP6YDFA%3D%3D";
-        var map = new HashMap<String, String>();
-        map.put("numOfRows", "10");
-        map.put("pageNo", "1");
-        map.put("MobileOS", "IOS");
-        map.put("MobileApp", "AppTest");
-        map.put("_type", "json");
-        JSONObject data = apiCaller.sendGetRequest("https://apis.data.go.kr/B551011/PhotoGalleryService1/galleryList1", serviceKey, map);
-        System.out.println("The Data from Server: " + data);
-    }
+//    public static void main(String[] args) {
+//        ApiCaller apiCaller = new ApiCaller();
+//
+//        System.out.println("//===== GET REQUEST =====//");
+//        var map = new HashMap<String, String>();
+//        map.put("numOfRows", "10");
+//        map.put("pageNo", "1");
+//        map.put("MobileOS", "IOS");
+//        map.put("MobileApp", "AppTest");
+//        JSONObject data = apiCaller.sendGetRequest("https://apis.data.go.kr/B551011/PhotoGalleryService1/galleryList1", serviceKey, map);
+//        System.out.println("The Data from Server: " + data);
+//    }
 }
