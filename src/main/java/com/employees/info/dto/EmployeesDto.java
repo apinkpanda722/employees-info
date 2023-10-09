@@ -34,10 +34,30 @@ public class EmployeesDto {
 
     private String departmentName;
 
+    public EmployeesDto(String firstName,
+                        String lastName,
+                        String email,
+                        String phoneNumber,
+                        LocalDateTime hireDate,
+                        String jobTitle,
+                        BigDecimal salary,
+                        BigDecimal commissionPct,
+                        String departmentName)
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.hireDate = hireDate;
+        this.jobTitle = jobTitle;
+        this.salary = salary;
+        this.commissionPct = commissionPct;
+        this.departmentName = departmentName;
+    }
+
     public EmployeesDto(Long employeeId,
                         BigDecimal salary,
-                        BigDecimal commissionPct
-                        )
+                        BigDecimal commissionPct)
     {
         this.employeeId = employeeId;
         this.salary = salary;
