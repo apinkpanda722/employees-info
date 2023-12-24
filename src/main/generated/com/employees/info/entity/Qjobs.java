@@ -2,6 +2,7 @@ package com.employees.info.entity;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
+import com.employees.info.spring.domain.jobs.Jobs;
 import com.querydsl.core.types.dsl.*;
 
 import com.querydsl.core.types.PathMetadata;
