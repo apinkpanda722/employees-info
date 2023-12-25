@@ -1,9 +1,9 @@
 package com.employees.info.spring.domain.employees;
 
 import com.employees.info.spring.api.controller.employees.dto.EmployeesDto;
-import com.employees.info.entity.QDepartments;
-import com.employees.info.entity.QEmployees;
-import com.employees.info.entity.QJobs;
+import com.employees.info.spring.domain.departments.QDepartments;
+import com.employees.info.spring.domain.employees.QEmployees;
+import com.employees.info.spring.domain.jobs.QJobs;
 import com.querydsl.core.types.Projections;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;

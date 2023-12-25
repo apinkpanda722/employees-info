@@ -2,6 +2,7 @@ package com.employees.info.spring.api.controller.employees.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -27,7 +28,9 @@ public class EmployeesDto {
 
     private String phoneNumber;
 
-    private LocalDateTime hireDate;
+    private String hireDate;
+
+    private String jobId;
 
     private String jobTitle;
 
@@ -37,11 +40,15 @@ public class EmployeesDto {
 
     private String departmentName;
 
+    private Long managerId;
+
+    private Long departmentId;
+
     public EmployeesDto(String firstName,
                         String lastName,
                         String email,
                         String phoneNumber,
-                        LocalDateTime hireDate,
+                        String hireDate,
                         String jobTitle,
                         BigDecimal salary,
                         BigDecimal commissionPct,
@@ -56,6 +63,33 @@ public class EmployeesDto {
         this.salary = salary;
         this.commissionPct = commissionPct;
         this.departmentName = departmentName;
+    }
+
+    public EmployeesDto(String firstName,
+                        String lastName,
+                        String email,
+                        String phoneNumber,
+                        String hireDate,
+                        String jobId,
+                        String jobTitle,
+                        BigDecimal salary,
+                        BigDecimal commissionPct,
+                        String departmentName,
+                        Long managerId,
+                        Long departmentId)
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.hireDate = hireDate;
+        this.jobId = jobId;
+        this.jobTitle = jobTitle;
+        this.salary = salary;
+        this.commissionPct = commissionPct;
+        this.departmentName = departmentName;
+        this.managerId = managerId;
+        this.departmentId = departmentId;
     }
 
     public EmployeesDto(Long employeeId,

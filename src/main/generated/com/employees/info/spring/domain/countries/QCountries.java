@@ -1,8 +1,7 @@
-package com.employees.info.entity;
+package com.employees.info.spring.domain.countries;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
-import com.employees.info.spring.domain.countries.Countries;
 import com.querydsl.core.types.dsl.*;
 
 import com.querydsl.core.types.PathMetadata;
@@ -16,7 +15,7 @@ import com.querydsl.core.types.Path;
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
 public class QCountries extends EntityPathBase<Countries> {
 
-    private static final long serialVersionUID = 89452915L;
+    private static final long serialVersionUID = 1679295047L;
 
     public static final QCountries countries = new QCountries("countries");
 

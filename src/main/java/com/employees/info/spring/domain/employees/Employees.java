@@ -33,7 +33,7 @@ public class Employees {
     private String phoneNumber;
 
     @Column(nullable = false, name = "hire_date")
-    private LocalDateTime hireDate;
+    private String hireDate;
 
     @Column(length = 10, nullable = false, name = "job_id")
     private String jobId;

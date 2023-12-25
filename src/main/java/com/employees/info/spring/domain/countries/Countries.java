@@ -14,7 +14,6 @@ import lombok.*;
 public class Countries {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String countryId;
 
     @Column(length = 40, name = "country_name")

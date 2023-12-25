@@ -1,8 +1,7 @@
-package com.employees.info.entity;
+package com.employees.info.spring.domain.employees;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
-import com.employees.info.spring.domain.employees.Employees;
 import com.querydsl.core.types.dsl.*;
 
 import com.querydsl.core.types.PathMetadata;
@@ -16,7 +15,7 @@ import com.querydsl.core.types.Path;
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
 public class QEmployees extends EntityPathBase<Employees> {
 
-    private static final long serialVersionUID = 1374635588L;
+    private static final long serialVersionUID = 506043049L;
 
     public static final QEmployees employees = new QEmployees("employees");
 
@@ -30,7 +29,7 @@ public class QEmployees extends EntityPathBase<Employees> {
 
     public final StringPath firstName = createString("firstName");
 
-    public final DateTimePath<java.time.LocalDateTime> hireDate = createDateTime("hireDate", java.time.LocalDateTime.class);
+    public final StringPath hireDate = createString("hireDate");
 
     public final StringPath jobId = createString("jobId");
 

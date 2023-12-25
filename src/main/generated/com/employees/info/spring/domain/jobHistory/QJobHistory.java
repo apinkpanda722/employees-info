@@ -1,8 +1,7 @@
-package com.employees.info.entity;
+package com.employees.info.spring.domain.jobHistory;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
-import com.employees.info.spring.domain.jobHistory.JobHistory;
 import com.querydsl.core.types.dsl.*;
 
 import com.querydsl.core.types.PathMetadata;
@@ -16,7 +15,7 @@ import com.querydsl.core.types.Path;
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
 public class QJobHistory extends EntityPathBase<JobHistory> {
 
-    private static final long serialVersionUID = -1330240712L;
+    private static final long serialVersionUID = 218421659L;
 
     public static final QJobHistory jobHistory = new QJobHistory("jobHistory");
 

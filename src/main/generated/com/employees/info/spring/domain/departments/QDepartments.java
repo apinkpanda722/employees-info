@@ -1,8 +1,7 @@
-package com.employees.info.entity;
+package com.employees.info.spring.domain.departments;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
-import com.employees.info.spring.domain.departments.Departments;
 import com.querydsl.core.types.dsl.*;
 
 import com.querydsl.core.types.PathMetadata;
@@ -16,7 +15,7 @@ import com.querydsl.core.types.Path;
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
 public class QDepartments extends EntityPathBase<Departments> {
 
-    private static final long serialVersionUID = 2079640160L;
+    private static final long serialVersionUID = 1567019041L;
 
     public static final QDepartments departments = new QDepartments("departments");
 

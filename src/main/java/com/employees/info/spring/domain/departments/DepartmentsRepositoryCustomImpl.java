@@ -1,7 +1,10 @@
 package com.employees.info.spring.domain.departments;
 
 import com.employees.info.spring.api.controller.employees.dto.DepartmentsDto;
-import com.employees.info.entity.*;
+import com.employees.info.spring.domain.departments.QDepartments;
+import com.employees.info.spring.domain.locations.QLocations;
+import com.employees.info.spring.domain.countries.QCountries;
+import com.employees.info.spring.domain.regions.QRegions;
 import com.querydsl.core.types.Projections;
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 

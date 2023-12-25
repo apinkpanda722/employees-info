@@ -16,7 +16,6 @@ import java.math.BigDecimal;
 public class Jobs {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String jobId;
 
     @Column(length = 35, nullable = false, name = "job_title")

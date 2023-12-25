@@ -1,8 +1,7 @@
-package com.employees.info.entity;
+package com.employees.info.spring.domain.locations;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
-import com.employees.info.spring.domain.locations.Locations;
 import com.querydsl.core.types.dsl.*;
 
 import com.querydsl.core.types.PathMetadata;
@@ -16,7 +15,7 @@ import com.querydsl.core.types.Path;
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
 public class QLocations extends EntityPathBase<Locations> {
 
-    private static final long serialVersionUID = 1834593821L;
+    private static final long serialVersionUID = -767217893L;
 
     public static final QLocations locations = new QLocations("locations");
 

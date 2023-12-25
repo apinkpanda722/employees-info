@@ -1,8 +1,7 @@
-package com.employees.info.entity;
+package com.employees.info.spring.domain.jobs;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
-import com.employees.info.spring.domain.jobs.Jobs;
 import com.querydsl.core.types.dsl.*;
 
 import com.querydsl.core.types.PathMetadata;
@@ -16,7 +15,7 @@ import com.querydsl.core.types.Path;
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
 public class QJobs extends EntityPathBase<Jobs> {
 
-    private static final long serialVersionUID = 1680017975L;
+    private static final long serialVersionUID = 1473499579L;
 
     public static final QJobs jobs = new QJobs("jobs");
 

@@ -1,8 +1,7 @@
-package com.employees.info.entity;
+package com.employees.info.spring.domain.regions;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
-import com.employees.info.spring.domain.regions.Regions;
 import com.querydsl.core.types.dsl.*;
 
 import com.querydsl.core.types.PathMetadata;
@@ -16,7 +15,7 @@ import com.querydsl.core.types.Path;
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
 public class QRegions extends EntityPathBase<Regions> {
 
-    private static final long serialVersionUID = -1610173826L;
+    private static final long serialVersionUID = 540217821L;
 
     public static final QRegions regions = new QRegions("regions");
 

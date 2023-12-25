@@ -1,9 +1,9 @@
 package com.employees.info.spring.domain.jobHistory;
 
 import com.employees.info.spring.api.controller.employees.dto.JobHistoryDto;
-import com.employees.info.entity.QDepartments;
-import com.employees.info.entity.QJobHistory;
-import com.employees.info.entity.QJobs;
+import com.employees.info.spring.domain.departments.QDepartments;
+import com.employees.info.spring.domain.jobHistory.QJobHistory;
+import com.employees.info.spring.domain.jobs.QJobs;
 import com.querydsl.core.types.Projections;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
