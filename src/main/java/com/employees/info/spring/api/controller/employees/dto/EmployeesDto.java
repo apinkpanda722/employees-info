@@ -44,7 +44,8 @@ public class EmployeesDto {
 
     private Long departmentId;
 
-    public EmployeesDto(String firstName,
+    public EmployeesDto(Long employeeId,
+                        String firstName,
                         String lastName,
                         String email,
                         String phoneNumber,
@@ -54,6 +55,7 @@ public class EmployeesDto {
                         BigDecimal commissionPct,
                         String departmentName)
     {
+        this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

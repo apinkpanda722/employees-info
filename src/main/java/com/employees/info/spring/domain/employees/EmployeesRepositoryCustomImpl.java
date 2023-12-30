@@ -2,7 +2,6 @@ package com.employees.info.spring.domain.employees;
 
 import com.employees.info.spring.api.controller.employees.dto.EmployeesDto;
 import com.employees.info.spring.domain.departments.QDepartments;
-import com.employees.info.spring.domain.employees.QEmployees;
 import com.employees.info.spring.domain.jobs.QJobs;
 import com.querydsl.core.types.Projections;
 import com.querydsl.core.types.dsl.BooleanExpression;
@@ -26,6 +25,7 @@ public class EmployeesRepositoryCustomImpl extends QuerydslRepositorySupport
         return from(employees)
                 .select(Projections.constructor(
                         EmployeesDto.class,
+                        employees.employeeId,
                         employees.firstName,
                         employees.lastName,
                         employees.email,
@@ -45,7 +45,7 @@ public class EmployeesRepositoryCustomImpl extends QuerydslRepositorySupport
     }
 
     @Override
-    public List<EmployeesDto> getEmployeesById(
+    public List<EmployeesDto> getEmployeesByDepartmentId(
             Long departmentId
     ) {
         return from(employees)

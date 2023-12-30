@@ -11,7 +11,7 @@ public interface EmployeesRepositoryCustom {
             Long employeeId
     );
 
-    public List<EmployeesDto> getEmployeesById(
+    public List<EmployeesDto> getEmployeesByDepartmentId(
             Long departmentId
     );
 

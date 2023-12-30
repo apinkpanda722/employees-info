@@ -46,7 +46,7 @@ public class EmployeesService {
     @Transactional
     public void getARaise(Long departmentId,
                           BigDecimal salaryIncreasePercentage) {
-        List<EmployeesDto> employeesByDepartment = employeesRepositoryCustomImpl.getEmployeesById(departmentId);
+        List<EmployeesDto> employeesByDepartment = employeesRepositoryCustomImpl.getEmployeesByDepartmentId(departmentId);
 
         for (EmployeesDto employee : employeesByDepartment) {
             BigDecimal salary = employee.getSalary();
