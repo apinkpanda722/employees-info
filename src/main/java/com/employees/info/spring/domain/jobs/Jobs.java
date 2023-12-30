@@ -16,6 +16,7 @@ import java.math.BigDecimal;
 public class Jobs {
 
     @Id
+    @Column(nullable = false, name = "job_id")
     private String jobId;
 
     @Column(length = 35, nullable = false, name = "job_title")

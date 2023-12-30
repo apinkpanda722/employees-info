@@ -25,6 +25,8 @@ public class QJobHistory extends EntityPathBase<JobHistory> {
 
     public final DateTimePath<java.time.LocalDateTime> endDate = createDateTime("endDate", java.time.LocalDateTime.class);
 
+    public final NumberPath<Long> jobHistoryId = createNumber("jobHistoryId", Long.class);
+
     public final StringPath jobId = createString("jobId");
 
     public final DateTimePath<java.time.LocalDateTime> startDate = createDateTime("startDate", java.time.LocalDateTime.class);

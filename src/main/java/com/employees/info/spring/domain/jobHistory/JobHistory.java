@@ -17,6 +17,9 @@ public class JobHistory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long jobHistoryId;
+
+    @Column(nullable = false, name = "employee_id")
     private Long employeeId;
 
     @Column(nullable = false, name = "start_date")
