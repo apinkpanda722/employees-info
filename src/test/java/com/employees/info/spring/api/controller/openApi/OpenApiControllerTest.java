@@ -27,7 +27,7 @@ class OpenApiControllerTest extends ControllerTestSupport {
 
         RequestBodyDto request = RequestBodyDto.builder()
                 .url("https://apis.data.go.kr/B551011/PhotoGalleryService1/galleryList1")
-                .serviceKey("jEIrt7Smf5IMFrn65l99DegsRF5rusgCpOpV6yV8DIPezaaV6gblD4m2Ndrlf%2BNqZzsA4SPnQfDOpnmOP6YDFA%3D%3D")
+                .serviceKey("jEIrt7Smf5IMFrn65l99DegsRF5rusgCpOpV6yV8DIPezaaV6gblD4m2")
                 .parameters(parameters)
                 .build();
 
