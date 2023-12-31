@@ -23,7 +23,7 @@ public class OpenApiController {
     @Operation(summary = "공공 데이터 API 조회",
             description = "Request Body로 받은 url, serviceKey, parameters를 사용해 임의의 공공데이터 API를 조회한다.")
     @PostMapping("/open-api")
-    public ApiResponse<JSONObject> getARaise(
+    public ApiResponse<JSONObject> getOpenApiData(
             @RequestBody @Valid RequestBodyDto requestBodyDto
     ) {
         return ApiResponse.ok(openApiService.call(requestBodyDto));
