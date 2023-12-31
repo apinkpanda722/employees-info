@@ -24,21 +24,12 @@ public class ApiCaller {
         log.info("serviceKey => " + serviceKey);
         try {
             var urlBuilder = new StringBuilder(baseUrl);
-            urlBuilder.append("?")
-                    .append(URLEncoder.encode("serviceKey", utf_8))
-                    .append("=")
-                    .append(serviceKey); /* Service Key */
-            urlBuilder.append("&")
-                    .append(URLEncoder.encode("_type", utf_8))
-                    .append("=")
-                    .append(URLEncoder.encode("json", utf_8));
+            appendUrlByBuilder(urlBuilder, "?", URLEncoder.encode("serviceKey", utf_8), "=", serviceKey);
+            appendUrlByBuilder(urlBuilder, "&", URLEncoder.encode("_type", utf_8), "=", URLEncoder.encode("json", utf_8));
             parameters.forEach((key, value) -> {
                 log.info("parameters => " + key + " : " + value);
                 try {
-                    urlBuilder.append("&")
-                        .append(URLEncoder.encode(key, utf_8))
-                        .append("=")
-                        .append(value); /* Service Key */
+                    appendUrlByBuilder(urlBuilder, "&", URLEncoder.encode(key, utf_8), "=", value);
                 } catch (UnsupportedEncodingException e) {
                     throw new RuntimeException(e);
                 }
@@ -61,6 +52,13 @@ public class ApiCaller {
             throw new RuntimeException(e);
         }
         return data;
+    }
+
+    private static void appendUrlByBuilder(StringBuilder urlBuilder, String param1, String param2, String param3, String param4) throws UnsupportedEncodingException {
+        urlBuilder.append(param1)
+                .append(param2)
+                .append(param3)
+                .append(param4);
     }
 
 //    public static void main(String[] args) {
