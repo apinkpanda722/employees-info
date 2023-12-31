@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -15,9 +16,10 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 
 @Slf4j
+@Component
 public class ApiCaller {
 
-    public static JSONObject sendGetRequest(String baseUrl, String serviceKey, HashMap<String, String> parameters) {
+    public JSONObject sendGetRequest(String baseUrl, String serviceKey, HashMap<String, String> parameters) {
         int responseCode;
         var data = new JSONObject();
         String utf_8 = String.valueOf(StandardCharsets.UTF_8);

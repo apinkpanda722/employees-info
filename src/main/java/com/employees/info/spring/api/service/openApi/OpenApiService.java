@@ -11,8 +11,12 @@ import org.springframework.stereotype.Service;
 @Service
 @Slf4j
 public class OpenApiService {
+
+    private final ApiCaller apiCaller;
+
     public JSONObject call(RequestBodyDto requestBodyDto) {
-        return ApiCaller.sendGetRequest(requestBodyDto.getUrl(),
+        JSONObject jsonObject = apiCaller.sendGetRequest(requestBodyDto.getUrl(),
                 requestBodyDto.getServiceKey(), requestBodyDto.getParameters());
+        return null;
     }
 }
